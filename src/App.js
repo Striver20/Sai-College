@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./Screens/Home";
+import Prospectus from "./Screens/Prospectus";
+import Fees from "./Screens/Fees";
+import Barel from "./Screens/Barel";
+import Lakhperabagh from "./Screens/Lakhperabagh";
+import PrePrimaryBarel from "./Screens/PrePrimaryBarel";
+import PhysicsHOD from "./Screens/PhysicsHOD";
+import PrimaryBarel from "./Screens/PrimaryBarel";
+import JuniorBarel from "./Screens/JuniorBarel";
+import SeniorBarel from "./Screens/SeniorBarel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/prospectus" element={<Prospectus />} />
+        <Route path="/fee" element={<Fees />} />
+        <Route path="/barel" element={<Barel />} />
+        <Route path="/lakhperabagh" element={<Lakhperabagh />} />
+        <Route path="/preprimary-barel" element={<PrePrimaryBarel />} />
+        <Route path="/primary-barel" element={<PrimaryBarel />} />
+        <Route path="/junior-barel" element={<JuniorBarel />} />
+        <Route path="/senior-barel" element={<SeniorBarel />} />
+        <Route path="/physicshod" element={<PhysicsHOD />} />
+      </Routes>
+    </Router>
   );
 }
 

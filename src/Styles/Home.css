@@ -1,0 +1,15 @@
+.home-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 40px 0px;
+}
+@media (max-width: 768px) {
+  .home-btns {
+    display: flex;
+    flex-direction: column;
+  }
+  .medhome-btn {
+    margin-bottom: 20px;
+  }
+}
